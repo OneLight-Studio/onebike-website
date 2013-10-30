@@ -1,0 +1,13 @@
+#AuthUserFile /home/onelight/www/.htpasswd
+#AuthType Basic
+#AuthName "Le blog ouvre bientot, mais pas de suite."
+#Require valid-user
+
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymlinks
+	RewriteEngine on
+
+	RewriteRule ^(.*)_v?[0-9A-z\._]+\.(js|css|less|png|jpg|jpeg)$ $1.$2 [L]
+</IfModule>

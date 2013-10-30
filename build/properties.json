@@ -1,0 +1,24 @@
+{
+	"common": {
+		"version": "1_0_A",
+
+		"url_base": "/",
+		"url_img": "img/"
+	},
+
+	"dev": {
+		"dev_domain_to_check": "/^.*loc$/",
+
+		"js_files": [
+			"js/util",
+			"js/nav",
+			"js/main"
+		]
+	},
+
+	"prod": {
+		"js_files": [
+			"js/site"
+		]
+	}
+}
