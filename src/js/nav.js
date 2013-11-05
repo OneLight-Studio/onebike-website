@@ -29,23 +29,12 @@
 
 		//Listen to mouse wheel
 		document.addEventListener("mousewheel", function(e) {
-			if (e.wheelDelta > 0) {
-				Nav.prevArticle();
-			} else {
-				Nav.nextArticle();
-			}
-
+			//Disable scrolling
 			return true;
 		});
-
 			//Firefox specific
 		document.addEventListener("DOMMouseScroll", function(e) {
-			if (e.detail < 0) {
-				Nav.prevArticle();
-			} else {
-				Nav.nextArticle();
-			}
-
+			//Disable scrolling
 			return true;
 		});
 
@@ -100,6 +89,8 @@
 
 			Nav.currentSection = section;
 		}
+
+		body.className  = "animation-enabled";
 	};
 
 	Nav.nextArticle = function() {
